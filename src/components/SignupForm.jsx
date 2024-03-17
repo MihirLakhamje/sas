@@ -26,7 +26,7 @@ export default function SignupForm() {
                 "/api/users/signup",
                 formData,
             );
-            router.push("/application")
+            router.push("/login")
             setError("");
             setDisableBtn(true);
         } catch (error) {

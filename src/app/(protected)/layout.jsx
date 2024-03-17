@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function RootLayout({ children }) {
     return (
-            <body>
+            <main>
                 <div className="navbar bg-base-100 flex justify-between">
                     <div className="navbar-start w-1/2">
                         <div className="dropdown">
@@ -68,6 +68,6 @@ export default function RootLayout({ children }) {
                     </div>
                 </div>
                 {children}
-            </body>
+            </main>
     );
 }

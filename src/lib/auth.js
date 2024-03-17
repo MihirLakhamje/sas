@@ -18,7 +18,7 @@ export async function encrypt(payload) {
         .setProtectedHeader({ alg: "HS256" })
         .setIssuedAt()
         .setJti(nanoid())
-        .setExpirationTime("1d")
+        .setExpirationTime("1 day")
         .sign(new TextEncoder().encode(getSecretKey()));
     return token;
 }
@@ -33,7 +33,13 @@ export async function decrypt(input) {
 }
 
 export async function getSession() {
-    const session = cookies().get("session")?.value;
-    if (!session) return null;
+    try {
+        const encryptData = cookies().get("session")?.value;
+        return encryptData ? (await decrypt(encryptData)) : null
+        
+    } catch (error) {
+        console.log(error.message)
+    }
 }
+
 

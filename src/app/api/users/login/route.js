@@ -40,9 +40,8 @@ export async function POST(request) {
             role: user.role,
         };
 
-        const expires = new Date(Date.now() + 5 * 60 * 1000);
+        const expires = new Date(Date.now() + 24 * 60 * 60 * 1000);
         const session = await encrypt(userPayload);
-        console.log(session)
 
         const response = NextResponse.json(
             { message: "user signed up" },
