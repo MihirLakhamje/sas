@@ -23,7 +23,7 @@ export default function LoginForm() {
             }
             await axios.post("/api/users/login", formData)
             
-            replace("/user/application")
+            replace("/user")
             setError("");
         } catch (error) {
             setError(error?.response?.data?.errorMsg);

@@ -1,23 +1,23 @@
-import SignupForm from "@/components/SignupForm";
+import LoginForm from "@/components/LoginForm";
 
 export const metadata = {
-	title: "Signup",
-	description: "Create your SAS account"
+	title: "Login",
+	description: "Login to your SAS account"
 }
 
-export default function SignupPage() {
+export default function LoginPage() {
     
     return (
         <>
             <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col">
+                <div className="hero-content flex-col max-w-sm w-full">
                     <div className="text-center ">
                         <h1 className="text-3xl font-bold">
-                            Create your account
+                            Welcome, back!
                         </h1>
                     </div>
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <SignupForm/>
+                        <LoginForm/>
                     </div>
                 </div>
             </div>

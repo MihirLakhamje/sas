@@ -9,7 +9,7 @@ export async function middleware(request) {
     const path = request.nextUrl.pathname;
 
     // public url
-    const publicUrl = path === "/login" || path === "/signup";
+    const publicUrl = path === "/login" || path === "/signup" || path === "/";
 
     // access to the verified data
     const verifiedToken = session && (await decrypt(session).catch((err) => {
@@ -44,5 +44,5 @@ export async function middleware(request) {
 }
 
 export const config = {
-    matcher: ["/login", "/signup", "/user", "/user/:path*", "/admin", "/admin/:path*"],
+    matcher: ["/", "/login", "/signup", "/user", "/user/:path*", "/admin", "/admin/:path*"],
 };
