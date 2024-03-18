@@ -7,7 +7,7 @@ export default function ApplicationPage() {
     return (
         <>
             <div><FormNav/></div>
-            <Link className="btn btn-primary" href={"/user/application/personal"}>Lets start</Link>
+            <Link className="btn btn-primary" href={"/user/application/set"}>Lets start</Link>
         </>
     );
 }

@@ -4,7 +4,7 @@ export default function ProtectedLayout({ children }) {
     return (
         <>
             <Header />
-            <main className="p-5">{children}</main>
+            <main className="p-0 sm:p-5">{children}</main>
         </>
     );
 }
